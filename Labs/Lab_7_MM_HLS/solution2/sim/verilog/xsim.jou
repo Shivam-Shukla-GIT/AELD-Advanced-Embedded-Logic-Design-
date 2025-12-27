@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Apr  5 23:33:17 2025
+# Process ID: 25752
+# Current directory: D:/Sem_6/AELD/Labs/Lab_7_MM_HLS/solution2/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/matrixmul_2/xsim_script.tcl}
+# Log file: D:/Sem_6/AELD/Labs/Lab_7_MM_HLS/solution2/sim/verilog/xsim.log
+# Journal file: D:/Sem_6/AELD/Labs/Lab_7_MM_HLS/solution2/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/matrixmul_2/xsim_script.tcl
+source matrixmul_2.tcl
