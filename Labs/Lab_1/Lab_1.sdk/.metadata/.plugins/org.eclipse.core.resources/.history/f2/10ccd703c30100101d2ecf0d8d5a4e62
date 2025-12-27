@@ -1,0 +1,847 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <complex.h>
+#include <string.h>
+#include "platform.h"  // Platform-specific initialization and cleanup functions
+#include <xtime_l.h> // Timer for execution time calculations
+
+#define NUM_EXPERIMENTS 21 // Number of experiments for averaging results
+#define PAYLOAD_BITS 96 // Data bits to be transferred in one payload
+#define RRC_FILTER_LENGTH 21 // Length of RRC Filter coefficient
+#define N_FFT 64 // Size of FFT, IFFT
+#define PREAMBLE_SIZE 53 // Length of the short preamble sequence
+#define LONG_PREAMBLE_LENGTH 160
+#define SHORT_PREAMBLE_LENGTH 160
+#define TX_SIG_LEN 9800 // Tx Signal length
+#define snr_num 1 // Length of SNR Array
+#define PACKETS_CAPTURE_LEN 3000  // Number of packets to capture
+#define rrc_rc_out_len (PACKETS_CAPTURE_LEN + RRC_FILTER_LENGTH - 1)
+#define delay_param 16
+#define window_length 32
+#define corr_arr_len (PACKETS_CAPTURE_LEN - delay_param - window_length +1)
+#define Short_preamble_slot_length 16
+#define ts_sec 0.00000005
+#define length_rrc_rx 10
+#define CP_LENGTH 16
+#define SIZE 48
+#define SYMBOLS_PER_PAYLOAD (PAYLOAD_BITS / 2)
+#define FRAME_SIZE (N_FFT + CP_LENGTH)
+#define FRAME_LENGTH (SHORT_PREAMBLE_LENGTH + LONG_PREAMBLE_LENGTH + 2 * FRAME_SIZE)
+#define OVERSAMPLING_RATE 2
+#define FRAME_TX_OVERSAMP_SIZE (FRAME_LENGTH * OVERSAMPLING_RATE)
+#define REPEAT_COUNT 10
+#define OUTPUT_SIGNAL_LENGTH (FRAME_TX_OVERSAMP_SIZE + RRC_FILTER_LENGTH - 1)
+#define FINAL_TX_SIGNAL_LENGTH (OUTPUT_SIGNAL_LENGTH * REPEAT_COUNT)
+
+// Define data types
+typedef float data_t;      // Data type for float numbers
+typedef complex float complex_t;   // Data type for complex numbers
+
+// Define a structure to store results
+typedef struct {
+	data_t evm;
+	data_t evm_AGC;
+	data_t ber;
+} Result;
+
+// Starting Transmitter and stoing the transmitted signal
+static complex_t Tx_signal[TX_SIG_LEN];
+
+// Adding noise to the transmitted signal.
+static complex_t Tx_OTA_signal[TX_SIG_LEN];
+
+// Virtual subcarriers
+const complex_t virtual_subcarrier[11] = {0.0 + 0.0 * I};
+
+// Pilot signals
+const complex_t pilot[4] = {1.0 + 0.0*I, 1.0 + 0.0*I, 1.0 + 0.0*I, -1.0 + 0.0*I};
+
+// RRC Filter cofficent
+const data_t rrc_filter_coff[RRC_FILTER_LENGTH] = {-0.0005, 0.0035, -0.0071, 0.0076, 0.0021, -0.0106, 0.0300, -0.0531, -0.0750, 0.4092, 0.8037, 0.4092, -0.0750, -0.0531, 0.0300, -0.0106, 0.0021, 0.0076, -0.0071, 0.0035, -0.0005};
+
+data_t snr_dB_values[snr_num] = {6}; // SNR Values
+
+static complex_t data_payload_1_mod[SYMBOLS_PER_PAYLOAD];
+static complex_t data_payload_2_mod[SYMBOLS_PER_PAYLOAD];
+static complex_t Long_preamble_slot_Frequency[N_FFT];
+static data_t data_payload_1[PAYLOAD_BITS];
+static data_t data_payload_2[PAYLOAD_BITS];
+
+// Execution time measurements
+data_t Tx_time, Channel_mod_time, Rx_time, Total_time;
+XTime Tx_Start, Tx_End, Channel_mod_Start, Channel_mod_End, Rx_Start, Rx_End, Total_Start, Total_End;
+
+//////////////////////////// Functions to implement FFT, IFFT, FFTSHIFT and IFFTSHIFT//////////////////////////
+// Function to perform FFT using Cooley-Tukey algorithm
+void fft(complex_t *x) {
+    int i, j, k, m;
+    for (i = 1, j = 0; i < N_FFT; i++) {
+        int bit = N_FFT >> 1;
+        while (j >= bit) {
+            j -= bit;
+            bit >>= 1;
+        }
+        j += bit;
+        if (i < j) {
+            complex_t temp = x[i];
+            x[i] = x[j];
+            x[j] = temp;
+        }
+    }
+
+    for (m = 2; m <= N_FFT; m <<= 1) {
+        data_t angle = -2.0 * M_PI / m;
+        complex_t w_m = cosf(angle) + sinf(angle) * I;
+        for (k = 0; k < N_FFT; k += m) {
+            complex_t w = 1.0;
+            for (j = 0; j < m / 2; j++) {
+                complex_t t = w * x[k + j + m / 2];
+                complex_t u = x[k + j];
+                x[k + j] = u + t;
+                x[k + j + m / 2] = u - t;
+                w *= w_m;
+            }
+        }
+    }
+}
+
+// Function to perform IFFT
+void ifft(complex_t *X) {
+    for (int i = 0; i < N_FFT; i++) {
+        X[i] = conjf(X[i]);
+    }
+    fft(X);
+    for (int i = 0; i < N_FFT; i++) {
+        X[i] = conjf(X[i]) / N_FFT;
+    }
+}
+
+// Function to perform FFT shift
+void fftshift(complex_t *X) {
+    int k = N_FFT / 2;
+    for (int i = 0; i < k; i++) {
+        complex_t temp = X[i];
+        X[i] = X[i + k];
+        X[i + k] = temp;
+    }
+}
+
+// Function to perform channel estimation
+void ifftshift(complex_t *X) {
+    int k = N_FFT / 2;
+    for (int i = 0; i < k; i++) {
+        complex_t temp = X[i];
+        X[i] = X[i + k];
+        X[i + k] = temp;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function to generate Short Preamble
+void generate_short_preamble(complex_t *Short_preamble)
+{
+	// Short Preamble sequence
+	complex_t S_k[PREAMBLE_SIZE] = {0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, -1.47196014438797 - 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, -1.47196014438797 - 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, -1.47196014438797 - 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, -1.47196014438797 - 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, -1.47196014438797 - 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I, 1.47196014438797 + 1.47196014438797*I, 0.00000000000000 + 0.00000000000000*I, 0.00000000000000 + 0.00000000000000*I};
+
+	// Initialize Short Preamble Slot Frequency to zero
+	complex_t Short_preamble_slot_Frequency[N_FFT];
+
+    // Adding Virtual Carriers in the start and end of short preamble seq.
+    for (int i = 0; i < N_FFT; i++) {
+        if (i < 6) {
+            Short_preamble_slot_Frequency[i] = virtual_subcarrier[i];
+        } else if (i < 59) {
+            Short_preamble_slot_Frequency[i] = S_k[i - 6];
+        } else {
+            Short_preamble_slot_Frequency[i] = virtual_subcarrier[i - 53];
+        }
+    }
+
+    ifftshift(Short_preamble_slot_Frequency);
+    ifft(Short_preamble_slot_Frequency);
+
+    // Replicate the first 16 samples 10 times
+    for (int i = 0; i < REPEAT_COUNT; i++) {
+        for (int j = 0; j < 16; j++) {
+            Short_preamble[i * 16 + j] = Short_preamble_slot_Frequency[j];
+        }
+    }
+}
+
+void generate_long_preamble(complex_t *Long_preamble)
+{
+    // Long preamble sequence [1x53]
+    data_t L_k[PREAMBLE_SIZE] = {1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 0, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, 1, 1, 1, 1};
+
+    // Adding Virtual Carriers in the start and end of short preamble seq.
+    for (int i = 0; i < N_FFT; i++) {
+        if (i < 6) {
+            Long_preamble_slot_Frequency[i] = virtual_subcarrier[i];
+        } else if (i < 59) {
+            Long_preamble_slot_Frequency[i] = L_k[i - 6] + 0.0*I;
+        } else {
+            Long_preamble_slot_Frequency[i] = virtual_subcarrier[i - 53];
+        }
+    }
+
+    complex_t temp[N_FFT];
+    // copy into temp;
+    for (int i = 0; i < N_FFT; i++) {
+        temp[i] = Long_preamble_slot_Frequency[i];
+    }
+    ifftshift(temp);
+    ifft(temp);
+
+    // Copy and replicate values into Long_preamble buffer
+    for (int i = 0; i < N_FFT; i++) {
+        if (i < 32) {
+            Long_preamble[i] = temp[i + 32];  // First 32 values (33:64 in MATLAB)
+        }
+        Long_preamble[i + 32] = temp[i];   // Copy entire Long_preamble_slot_Time
+        Long_preamble[i + 96] = temp[i];   // Repeat Long_preamble_slot_Time
+    }
+}
+
+// QPSK Modulation function
+void qpsk_modulation(data_t *data_bits, complex_t *symbols)
+{
+    for (int i = 0; i < PAYLOAD_BITS; i +=2)
+    {
+        if (data_bits[i] == 0 && data_bits[i+1] == 0)
+            symbols[i/2] = 0.707 + 0.707*I;
+        else if (data_bits[i] == 0 && data_bits[i+1] == 1)
+            symbols[i/2] = -0.707 + 0.707*I;
+        else if (data_bits[i] == 1 && data_bits[i+1] == 0)
+            symbols[i/2] = -0.707 - 0.707*I;
+        else
+            symbols[i/2] = 0.707 - 0.707*I;
+    }
+}
+
+// Function to construct data frame
+void construct_data_frame(complex_t *modulated_data, complex_t *data_frame)
+{
+    for (int i = 0; i < 6; i++) data_frame[i] = virtual_subcarrier[i];
+    for (int i = 0; i < 5; i++) data_frame[6 + i] = modulated_data[i];
+    data_frame[11] = pilot[0];
+    for (int i = 0; i < 13; i++) data_frame[12 + i] = modulated_data[5 + i];
+    data_frame[25] = pilot[1];
+    for (int i = 0; i < 6; i++) data_frame[26 + i] = modulated_data[18 + i];
+    data_frame[32] = 0.0f + 0.0f * I;
+    for (int i = 0; i < 6; i++) data_frame[33 + i] = modulated_data[24 + i];
+    data_frame[39] = pilot[2];
+    for (int i = 0; i < 13; i++) data_frame[40 + i] = modulated_data[30 + i];
+    data_frame[53] = pilot[3];
+    for (int i = 0; i < 5; i++) data_frame[54 + i] = modulated_data[43 + i];
+    for (int i = 0; i < 5; i++) data_frame[59 + i] = virtual_subcarrier[6 + i];
+}
+
+void payload_generation(complex_t *data_1_TX_payload, complex_t *data_2_TX_payload){
+
+    // Data bits
+    for (int i = 0; i < PAYLOAD_BITS; i++)
+    {
+    	data_payload_1[i] = rand() & 1; // random data bit for payload 1
+    	data_payload_2[i] = rand() & 1; // random data bit for payload 2
+    }
+
+    // QPSK Demodulation
+    qpsk_modulation(data_payload_1,data_payload_1_mod);
+    qpsk_modulation(data_payload_2,data_payload_2_mod);
+
+    // Construct Data Frame
+    complex_t data_frame_1[N_FFT];
+    complex_t data_frame_2[N_FFT];
+    construct_data_frame(data_payload_1_mod,data_frame_1);
+    construct_data_frame(data_payload_2_mod,data_frame_2);
+
+    // Perform IFFT Shift and IIFT
+
+    ifftshift(data_frame_1);
+    ifft(data_frame_1);
+
+    ifftshift(data_frame_2);
+    ifft(data_frame_2);
+
+    for (int i = 0; i < CP_LENGTH + N_FFT; i++) {
+        data_1_TX_payload[i] = (i < CP_LENGTH) ? data_frame_1[N_FFT - CP_LENGTH + i] : data_frame_1[i - CP_LENGTH];
+        data_2_TX_payload[i] = (i < CP_LENGTH) ? data_frame_2[N_FFT - CP_LENGTH + i] : data_frame_2[i - CP_LENGTH];
+    }
+
+}
+
+void frame_combine_and_oversample(complex_t *Short_preamble,complex_t *Long_preamble,complex_t *data_1_TX_payload,complex_t *data_2_TX_payload,complex_t *Frame_Tx_Oversamp){
+
+    int  oversamp_index = 0;
+
+    // Initialize oversampled frame to zeros
+    for (int i = 0; i < FRAME_TX_OVERSAMP_SIZE; i++) {
+        Frame_Tx_Oversamp[i] = 0.0f + 0.0f * I;
+    }
+
+    // Copy Short Preamble with oversampling
+    for (int i = 0; i < SHORT_PREAMBLE_LENGTH; i++, oversamp_index += OVERSAMPLING_RATE) {
+        Frame_Tx_Oversamp[oversamp_index] = Short_preamble[i];
+    }
+
+    // Copy Long Preamble with oversampling
+    for (int i = 0; i < LONG_PREAMBLE_LENGTH; i++, oversamp_index += OVERSAMPLING_RATE) {
+        Frame_Tx_Oversamp[oversamp_index] = Long_preamble[i];
+    }
+
+    // Copy Data Payload 1 with oversampling
+    for (int i = 0; i < FRAME_SIZE; i++, oversamp_index += OVERSAMPLING_RATE) {
+        Frame_Tx_Oversamp[oversamp_index] = data_1_TX_payload[i];
+    }
+
+    // Copy Data Payload 2 with oversampling
+    for (int i = 0; i < FRAME_SIZE; i++, oversamp_index += OVERSAMPLING_RATE) {
+        Frame_Tx_Oversamp[oversamp_index] = data_2_TX_payload[i];
+    }
+}
+
+void convolve_rrc(complex_t *Frame_Tx_Oversamp, complex_t *tx_rrx_out)
+{
+    // Clear output array (no need for imaginary part initialization)
+    for (int n = 0; n < OUTPUT_SIGNAL_LENGTH; n++) {
+        tx_rrx_out[n] = 0.0f + 0.0f * I;
+        for (int k = 0; k < RRC_FILTER_LENGTH; k++) {
+            if (n - k >= 0 && n - k < FRAME_TX_OVERSAMP_SIZE)
+                tx_rrx_out[n] += rrc_filter_coff[k] * Frame_Tx_Oversamp[n - k];
+        }
+    }
+}
+
+
+void transmitter(complex_t *Tx_signal){
+
+    // Generate short and long preambles
+    static complex_t Short_preamble[SHORT_PREAMBLE_LENGTH];
+    static complex_t Long_preamble[LONG_PREAMBLE_LENGTH];
+    generate_short_preamble(Short_preamble);
+    generate_long_preamble(Long_preamble);
+
+    // Payload generations
+    static complex_t data_1_TX_payload[FRAME_SIZE];
+    static complex_t data_2_TX_payload[FRAME_SIZE];
+    payload_generation(data_1_TX_payload, data_2_TX_payload);
+
+    static complex_t Frame_Tx_Oversamp[FRAME_TX_OVERSAMP_SIZE];
+    frame_combine_and_oversample(Short_preamble, Long_preamble, data_1_TX_payload, data_2_TX_payload,Frame_Tx_Oversamp);
+
+    complex_t tx_rrx_out[OUTPUT_SIGNAL_LENGTH];
+    convolve_rrc(Frame_Tx_Oversamp, tx_rrx_out);
+
+    for (int i = 0; i < REPEAT_COUNT; i++) {
+        for (int j = 0; j < OUTPUT_SIGNAL_LENGTH; j++) {
+            Tx_signal[i * OUTPUT_SIGNAL_LENGTH + j] = tx_rrx_out[j];
+        }
+    }
+}
+
+data_t tx_mean_power(complex_t Tx_signal[TX_SIG_LEN]) {
+	data_t power = 0.0;
+    for (int i = 0; i < TX_SIG_LEN; i++) {
+        power += crealf(Tx_signal[i] * conjf(Tx_signal[i]));
+    }
+    return power / TX_SIG_LEN;
+}
+
+void add_noise(data_t snr_dB, data_t tx_signal_power, complex_t Tx_signal[TX_SIG_LEN], complex_t rx_signal[TX_SIG_LEN]) {
+
+	// Convert SNR from dB to linear scale
+    data_t snr_linear = powf(10.0, snr_dB / 10.0);
+
+    // Compute noise power and its standard deviation
+    data_t noise_power = tx_signal_power / snr_linear;
+    data_t noise_std_dev = sqrtf(noise_power/2.0);
+
+    for (int i = 0; i < TX_SIG_LEN; i++) {
+        // Generate two independent random variables in the range (0, 1)
+        data_t u1 = ((data_t)rand() + 1.0) / ((data_t)RAND_MAX + 1.0);
+        data_t u2 = ((data_t)rand() + 1.0) / ((data_t)RAND_MAX + 1.0);
+
+        // Apply Box-Muller transform to generate a Gaussian pair (zero mean, unit variance)
+        data_t z0 = sqrtf(-2.0 * logf(u1)) * cosf(2.0 * M_PI * u2);  // Real part (Gaussian noise)
+        data_t z1 = sqrtf(-2.0 * logf(u1)) * sinf(2.0 * M_PI * u2);  // Imaginary part (Gaussian noise)
+
+        // Scale by noise standard deviation and add to the transmitted signal
+        rx_signal[i] = Tx_signal[i] + noise_std_dev * (z0 + z1 * I);
+    }
+
+    printf("Noise Power %f\n", noise_power);
+}
+
+void capture_data(complex_t Tx_OTA_signal[TX_SIG_LEN],complex_t Rx_signal[PACKETS_CAPTURE_LEN]){
+
+    // Generate a random start index within the valid range
+    int rx_start = rand() % (TX_SIG_LEN - PACKETS_CAPTURE_LEN+ 1);
+
+    // Capture the received signal
+    for (int i = 0; i < PACKETS_CAPTURE_LEN; i++) {
+    	Rx_signal[i] = Tx_OTA_signal[i+rx_start];
+    }
+
+}
+
+void rx_rrx_conv(complex_t Rx_signal[PACKETS_CAPTURE_LEN],complex_t  Rx_filter_signal[rrc_rc_out_len]){
+
+    for (int n = 0; n < rrc_rc_out_len; n++) {
+    	Rx_filter_signal[n] = 0.0 + 0.0*I;
+        for (int k = 0; k < RRC_FILTER_LENGTH; k++) {
+        	int idx = n + k - (RRC_FILTER_LENGTH - 1);
+        	if (idx >= 0 && idx < PACKETS_CAPTURE_LEN) {
+        		Rx_filter_signal[n] += (rrc_filter_coff[k]+0.0*I) * Rx_signal[idx];
+        	}
+        }
+    }
+}
+
+void packet_detection(complex_t Rx_signal[PACKETS_CAPTURE_LEN], data_t corr_out[corr_arr_len]){
+
+    for (int n = 0; n < corr_arr_len; n++) {
+    	complex_t temp1 = 0.0 + 0.0*I;
+    	data_t temp2 = 0.0;
+    	for (int k = 0; k < window_length; k++) {
+    		temp1 += Rx_signal[n+k]*Rx_signal[n+k+delay_param];
+    		temp2 += crealf(Rx_signal[n+k+delay_param] * conjf(Rx_signal[n+k+delay_param]));
+    	}
+    	corr_out[n] = (crealf(temp1 * conjf(temp1)))/(temp2*temp2);
+    }
+}
+
+void packet_selection_and_downsampling(complex_t rx_frame[FRAME_LENGTH],data_t corr_out[corr_arr_len],complex_t Rx_filter_signal[rrc_rc_out_len]){
+
+	data_t packet_threshold = 0.8;
+
+	int temp_packet_idx_arr[corr_arr_len] = {0};
+    int idx_count = 0;
+
+    for (int i = 0; i < corr_arr_len; i++) {
+        if (corr_out[i] > packet_threshold) {
+        	temp_packet_idx_arr[idx_count] = i;
+        	idx_count += 1;
+        }
+    }
+
+    int packet_idx_arr[idx_count];
+
+    for (int i = 0; i < idx_count; i++) {
+        packet_idx_arr[i] = temp_packet_idx_arr[i];
+    }
+
+    int temp3[idx_count + 1];
+
+
+    // Compute the first element
+    temp3[0] = packet_idx_arr[0];
+
+    // Compute differences for the middle elements
+    for (int i = 1; i < idx_count; i++) {
+    	temp3[i] = packet_idx_arr[i] - packet_idx_arr[i - 1];
+    }
+    // Compute the last element
+    temp3[idx_count] = -packet_idx_arr[idx_count - 1];
+
+    int temp_packet_front[idx_count+1];
+    int packet_front_count = 0;
+    for (int i = 0; i < idx_count+1; i++) {
+    	if (temp3[i] > 300) {
+    		temp_packet_front[packet_front_count] = i;
+    		packet_front_count += 1;
+        	}
+    	else{
+    		temp_packet_front[i] = 0;
+    	}
+        }
+    int packet_front[packet_front_count];
+    for (int i = 0; i < packet_front_count; i++) {
+    	packet_front[i] = temp_packet_front[i];
+    }
+
+    int packet_front_idx[packet_front_count];
+    for (int i = 0; i < packet_front_count; i++) {
+        packet_front_idx[i] = packet_idx_arr[packet_front[i]];
+    }
+
+    int threshold_length = 230; // Minimum length of the packet
+    int packet_idx = 0;
+    for (int x = 0; x < packet_front_count - 1; x++) {
+    	if (corr_out[packet_front_idx[x] + threshold_length] > packet_threshold) {
+    		packet_idx = packet_front_idx[x] + length_rrc_rx + 1;  // Adjust for RRC filter delay
+    		break;  // Exit loop once a valid packet is found
+    		}
+    }
+
+    int end_idx = OVERSAMPLING_RATE * FRAME_LENGTH + packet_idx - 1;
+    int j = 0;
+
+    // Loop to extract values at the specified step
+    for (int i = packet_idx; i <= end_idx; i += OVERSAMPLING_RATE) {
+    	rx_frame[j++] = Rx_filter_signal[i];
+        }
+}
+
+
+void coarse_cfo_estimation(complex_t rx_frame[FRAME_LENGTH], complex_t rx_frame_after_coarse[FRAME_LENGTH]) {
+    int start1 = 5 * Short_preamble_slot_length;
+    int start2 = 6 * Short_preamble_slot_length;
+
+    // Compute the complex conjugate product
+    complex_t prod_consq_frame_coarse = 0.0 + 0.0 * I;
+    for (int i = 0; i < Short_preamble_slot_length; i++) {
+        prod_consq_frame_coarse += rx_frame[start1 + i] * conjf(rx_frame[start2 + i]);
+    }
+
+    // Estimate the coarse frequency offset
+    data_t freq_coarse_est = (-1.0 / (2.0 * M_PI * Short_preamble_slot_length * ts_sec)) *atan2f(cimagf(prod_consq_frame_coarse), crealf(prod_consq_frame_coarse));
+
+    // Apply CFO correction to the received frame
+    for (int i = 0; i < FRAME_LENGTH; i++) {
+        data_t phase_shift = -2.0 * M_PI * freq_coarse_est * ts_sec * i;
+        rx_frame_after_coarse[i] = rx_frame[i] * cexpf(I * phase_shift);
+    }
+}
+
+void fine_cfo_estimation(complex_t rx_frame_after_coarse[FRAME_LENGTH], complex_t rx_frame_after_fine[FRAME_LENGTH]) {
+    // Compute the complex conjugate product for fine CFO estimation
+    complex_t prod_consq_frame_fine = 0.0;
+    for (int i = 0; i < Short_preamble_slot_length * 4; i++) {
+        prod_consq_frame_fine += rx_frame_after_coarse[Short_preamble_slot_length * 12 + i] *conjf(rx_frame_after_coarse[Short_preamble_slot_length * 16 + i]);
+    }
+
+    // Estimate fine frequency offset
+    data_t freq_fine_est = (-1.0 / (2.0 * M_PI * 64 * ts_sec)) * atan2f(cimagf(prod_consq_frame_fine), crealf(prod_consq_frame_fine));
+
+    // Apply fine frequency offset correction
+    for (int i = 0; i < FRAME_LENGTH; i++) {
+        rx_frame_after_fine[i] = rx_frame_after_coarse[i] * cexpf(-1.0 * I * 2.0 * M_PI * freq_fine_est * ts_sec * i);
+    }
+}
+
+void channel_estimation(complex_t *rx_frame_after_fine, complex_t *H_est_time) {
+
+	complex_t Long_preamble_1[N_FFT], Long_preamble_2[N_FFT];
+
+    for (int i = 0; i < N_FFT; i++) {
+        Long_preamble_1[i] = rx_frame_after_fine[Short_preamble_slot_length * 12 + i];
+        Long_preamble_2[i] = rx_frame_after_fine[Short_preamble_slot_length * 16 + i];
+    }
+
+    fft(Long_preamble_1);
+    fft(Long_preamble_2);
+    fftshift(Long_preamble_1);
+    fftshift(Long_preamble_2);
+
+    for (int i = 0; i < N_FFT; i++) {
+    	H_est_time[i] = 0.5 * (Long_preamble_1[i] + Long_preamble_2[i]) * conjf(Long_preamble_slot_Frequency[i]);
+    }
+}
+
+void one_tap_equalizer( complex_t *rx_frame_after_fine, complex_t *H_est, complex_t *equalized_1, complex_t *equalized_2) {
+
+	complex_t RX_Payload_1_time[FRAME_SIZE];
+    complex_t RX_Payload_1_no_CP[N_FFT];
+
+    complex_t RX_Payload_2_time[FRAME_SIZE];
+    complex_t RX_Payload_2_no_CP[N_FFT];
+
+    // Extract first payload frame
+    for (int i = 0; i < FRAME_SIZE; i++) {
+        RX_Payload_1_time[i] = rx_frame_after_fine[320 + i];
+        RX_Payload_2_time[i] = rx_frame_after_fine[400 + i];
+    }
+
+    // Remove cyclic prefix
+    for (int i = 0; i < N_FFT; i++) {
+        RX_Payload_1_no_CP[i] = RX_Payload_1_time[CP_LENGTH + i];
+        RX_Payload_2_no_CP[i] = RX_Payload_2_time[CP_LENGTH + i];
+    }
+
+    // Apply FFT and shift
+    fft(RX_Payload_1_no_CP);
+    fftshift(RX_Payload_1_no_CP);
+
+    // Apply FFT and shift
+    fft(RX_Payload_2_no_CP);
+    fftshift(RX_Payload_2_no_CP);
+
+    // Apply equalization
+    for (int i = 0; i < N_FFT; i++) {
+        equalized_1[i] = RX_Payload_1_no_CP[i] / H_est[i];
+        equalized_2[i] = RX_Payload_2_no_CP[i] / H_est[i];
+    }
+}
+
+void extract_payload(complex_t *equalized,complex_t *payload) {
+
+    for(int i = 6;i <=10;i++) {
+        payload[i-6] = equalized[i];
+    }
+
+    for(int i = 12;i <=24;i++) {
+        payload[i-7] = equalized[i];
+    }
+
+    for(int i = 26;i <=31;i++) {
+        payload[i-8] = equalized[i];
+    }
+
+    // 33 to 38
+    for(int i = 33;i <=38;i++) {
+        payload[i-9] = equalized[i];
+    }
+
+    // 40 to 52
+    for(int i = 40;i <=52;i++) {
+        payload[i-10] = equalized[i];
+    }
+
+    // 54 to 58
+    for(int i = 54;i <=58;i++) {
+        payload[i-11] = equalized[i];
+    }
+}
+
+// Generalized AGC Function for Rx Data Payload
+void AGC_Rx_Data_Payload(complex_t *RX_Payload_no_pilot, complex_t *RX_Payload_Final) {
+
+    const data_t scale = 0.707;
+
+    for (int idx = 0; idx < SIZE; idx++) {
+        const data_t real_part = crealf(RX_Payload_no_pilot[idx]);
+        const data_t imag_part = cimagf(RX_Payload_no_pilot[idx]);
+
+        // Simplified conditional statements
+        RX_Payload_Final[idx] = (real_part > 0 ? scale : real_part < 0 ? -scale : 0) + (imag_part > 0 ? scale : imag_part < 0 ? -scale : 0) * I;
+    }
+}
+
+
+// Function for QPSK Demodulation
+void QPSK_Demodulate(complex_t *RX_Payload_Final, data_t *RX_Payload_Demod) {
+    for (int i = 0; i < SIZE; i++) {
+        const data_t real_part = crealf(RX_Payload_Final[i]);
+        const data_t imag_part = cimagf(RX_Payload_Final[i]);
+
+        // Simplified conditional statements
+        if (real_part > 0 && imag_part > 0) {
+            RX_Payload_Demod[2 * i] = 0;
+            RX_Payload_Demod[2 * i + 1] = 0;
+        } else if (real_part < 0 && imag_part > 0) {
+            RX_Payload_Demod[2 * i] = 0;
+            RX_Payload_Demod[2 * i + 1] = 1;
+        } else if (real_part < 0 && imag_part < 0) {
+            RX_Payload_Demod[2 * i] = 1;
+            RX_Payload_Demod[2 * i + 1] = 0;
+        } else if (real_part > 0 && imag_part < 0) {
+            RX_Payload_Demod[2 * i] = 1;
+            RX_Payload_Demod[2 * i + 1] = 1;
+        }
+    }
+}
+
+// Function for EVM Calculation (Generalized for both before and after AGC)
+data_t calculate_evm_agc(complex_t *RX_Payload_1, complex_t *RX_Payload_2, complex_t *data_payload_1_mod, complex_t *data_payload_2_mod) {
+
+	data_t error_rms = 0.0;
+    data_t transmitted_rms = 0.0;
+
+    for (int i = 0; i < SIZE; i++) {
+    	complex_t error_1 = RX_Payload_1[i] - data_payload_1_mod[i];
+    	complex_t error_2 = RX_Payload_2[i] - data_payload_2_mod[i];
+
+    	error_rms = error_rms + crealf(error_1 * conjf(error_1)) + crealf(error_2 * conjf(error_2));
+    	transmitted_rms = transmitted_rms + crealf(data_payload_1_mod[i] * conjf(data_payload_1_mod[i])) + crealf(data_payload_2_mod[i] * conjf(data_payload_2_mod[i]));
+    }
+
+    data_t evm = sqrtf(error_rms) / sqrtf(transmitted_rms);
+
+    data_t temp = 20 * log10f(evm);
+
+    if (temp == -INFINITY){
+    	temp = -40;
+    }
+
+    // Return the EVM in dB
+    return temp;
+
+}
+
+// Function for BER Calculation
+data_t calculate_ber(data_t *data_payload_1, data_t *RX_Payload_1_demod, data_t *data_payload_2, data_t *RX_Payload_2_demod) {
+
+	int errors = 0;
+
+    for (int i = 0; i < 2 * SIZE; i++) {
+    	if (fabsf(data_payload_1[i] - RX_Payload_1_demod[i]) > 0 || fabsf(data_payload_2[i] - RX_Payload_2_demod[i]) > 0) {
+    	    errors++;
+    	}
+    }
+
+    data_t temp = (data_t)errors / (4 * SIZE);
+
+    if (temp == 0.0){
+    	temp = 0.000001;
+    }
+    return temp;
+}
+
+void Channel_Modelling(){
+    // Calling function to calulate mean transmitted power
+    data_t tx_signal_power = tx_mean_power(Tx_signal);
+    printf("Received Signal Power %f\n", tx_signal_power);
+
+    // Snr value
+    printf("Snr Value is %f\n", snr_dB_values[0]);
+
+    // Calling add noise function
+    add_noise(snr_dB_values[0],tx_signal_power,Tx_signal, Tx_OTA_signal); // Add noise to signal
+}
+
+void Receiver_Main(complex_t Tx_OTA_signal[TX_SIG_LEN], Result results, data_t snr_dB) {
+
+    // Receiver start
+    printf("=================================== RECEIVER START ======================\n\r");
+
+	// Function to start receiver and capture random 3000 samples
+	static complex_t Rx_signal[PACKETS_CAPTURE_LEN];
+	capture_data(Tx_OTA_signal, Rx_signal); // Capture 3000 samples
+
+	// Applyig convolution between Recieved signal and RRC Filter
+	static complex_t Rx_filter_signal[rrc_rc_out_len];
+	rx_rrx_conv(Rx_signal,Rx_filter_signal);
+
+	// Packet detection
+	static data_t corr_out[corr_arr_len];
+	packet_detection(Rx_signal, corr_out);
+
+	// Packet selection and downsampling
+	static complex_t rx_frame[FRAME_LENGTH];
+	packet_selection_and_downsampling(rx_frame,corr_out,Rx_filter_signal);
+
+	// Coarse CFO
+	static complex_t rx_frame_after_coarse[FRAME_LENGTH];
+	coarse_cfo_estimation(rx_frame, rx_frame_after_coarse);
+
+	// Fine CFO
+	static complex_t rx_frame_after_fine[FRAME_LENGTH];
+	fine_cfo_estimation(rx_frame_after_coarse, rx_frame_after_fine);
+
+	// Channel_estimation
+	static complex_t H_est[N_FFT];
+	channel_estimation(rx_frame_after_fine,H_est);
+
+	// One_tap_equalizer
+	static complex_t RX_Payload_1_Frequency_Equalizer[N_FFT];
+	static complex_t RX_Payload_2_Frequency_Equalizer[N_FFT];
+	one_tap_equalizer(rx_frame_after_fine, H_est, RX_Payload_1_Frequency_Equalizer,RX_Payload_2_Frequency_Equalizer);
+
+	//Extract_payload 1
+	static complex_t RX_Payload_1_no_pilot[SIZE];
+	extract_payload(RX_Payload_1_Frequency_Equalizer, RX_Payload_1_no_pilot);
+
+	//	Extract_payload 2
+	static complex_t RX_Payload_2_no_pilot[SIZE];
+	extract_payload(RX_Payload_2_Frequency_Equalizer, RX_Payload_2_no_pilot);
+
+	// Output complex array for Payload 1
+	static complex_t RX_Payload_1_Final[SIZE];
+	AGC_Rx_Data_Payload(RX_Payload_1_no_pilot, RX_Payload_1_Final);
+
+	// Output complex array for Payload 2
+	static complex_t RX_Payload_2_Final[SIZE];
+	AGC_Rx_Data_Payload(RX_Payload_2_no_pilot, RX_Payload_2_Final);
+
+	// QPSK Demodulation for Payload 1
+	static data_t RX_Payload_1_Demod[2 * SIZE];
+	QPSK_Demodulate(RX_Payload_1_Final, RX_Payload_1_Demod);
+
+	// QPSK Demodulation for Payload 2
+	static data_t RX_Payload_2_Demod[2 * SIZE];
+	QPSK_Demodulate(RX_Payload_2_Final, RX_Payload_2_Demod);
+
+	// Calculate EVM before AGC
+	results.evm = calculate_evm_agc(RX_Payload_1_no_pilot, RX_Payload_2_no_pilot, data_payload_1_mod, data_payload_2_mod);
+	printf("EVM Before AGC (dB):%f\n", results.evm);
+
+	// Calculate EVM after AGC
+	results.evm_AGC = calculate_evm_agc(RX_Payload_1_Final, RX_Payload_2_Final, data_payload_1_mod, data_payload_2_mod);
+	printf("EVM After AGC (dB):%f\n", results.evm_AGC);
+
+	// Calculate BER
+	results.ber = calculate_ber(data_payload_1, RX_Payload_1_Demod, data_payload_2,  RX_Payload_2_Demod);
+	printf("BER: %f\n\n", results.ber);
+}
+
+int main(){
+    init_platform();
+    printf("Hello World\n\r");
+    srand(10);
+
+    // Initialize results
+    Result results;
+    // Starting Transmitter and stoing the transmitted signal
+    static complex_t Tx_signal[TX_SIG_LEN];
+    // Adding noise to the transmitted signal.
+    static complex_t Tx_OTA_signal[TX_SIG_LEN];
+
+    data_t Tx_time = 0.0;
+    data_t Rx_time = 0.0 ;
+    data_t Total_time = 0.0;
+    XTime Tx_Start, Tx_End, Rx_Start, Rx_End, Total_Start, Total_End;
+
+    for (int i = 0; i < NUM_EXPERIMENTS; i++) {
+
+    	XTime_SetTime(0);
+    	XTime_GetTime(&Total_Start);
+    	transmitter(Tx_signal);
+        // Calling function to calulate mean transmitted power
+        data_t tx_signal_power = tx_mean_power(Tx_signal);
+    	add_noise(10,tx_signal_power,Tx_signal, Tx_OTA_signal); // Add noise to signal
+     	Receiver_Main(Tx_OTA_signal, results); // Main receiver funtion
+     	XTime_GetTime(&Total_End);
+     	Total_time += ((Total_End - Total_Start) / (COUNTS_PER_SECOND / 1000000));
+     }
+
+    for (int i = 0; i < NUM_EXPERIMENTS; i++) {
+
+    	XTime_SetTime(0);
+    	XTime_GetTime(&Tx_Start);
+    	transmitter(Tx_signal);
+    	XTime_GetTime(&Tx_End);
+
+        // Calling function to calulate mean transmitted power
+        data_t tx_signal_power = tx_mean_power(Tx_signal);
+    	add_noise(10,tx_signal_power,Tx_signal, Tx_OTA_signal); // Add noise to signal
+     	Receiver_Main(Tx_OTA_signal, results); // Main receiver funtion
+
+     	Tx_time += ((Tx_End - Tx_Start) / (COUNTS_PER_SECOND / 1000000));
+     }
+
+    for (int i = 0; i < NUM_EXPERIMENTS; i++) {
+
+    	transmitter(Tx_signal);
+        // Calling function to calulate mean transmitted power
+        data_t tx_signal_power = tx_mean_power(Tx_signal);
+    	add_noise(10,tx_signal_power,Tx_signal, Tx_OTA_signal); // Add noise to signal
+
+    	XTime_SetTime(0);
+    	XTime_GetTime(&Rx_Start);
+     	Receiver_Main(Tx_OTA_signal, results); // Main receiver funtion
+     	XTime_GetTime(&Rx_End);
+     	Rx_time += ((Rx_Start - Rx_End) / (COUNTS_PER_SECOND / 1000000));
+     }
+
+    // Calculate average times
+    Tx_time /= NUM_EXPERIMENTS;
+    Rx_time /= NUM_EXPERIMENTS;
+    Total_time /= NUM_EXPERIMENTS;
+
+    // Print average times
+    printf("\n----------- AVERAGE EXECUTION TIME (Microseconds) --------------------\n");
+    printf("Transmitter time: %.2f µs,Receiver time: %.2f µs, Total time: %.2f µs\r\n", Tx_time, Rx_time, Total_time);
+    cleanup_platform();
+    return 0;
+}

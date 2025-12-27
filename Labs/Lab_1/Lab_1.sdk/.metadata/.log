@@ -1,0 +1,936 @@
+!SESSION 2025-03-16 14:49:52.342 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:/Sem_6/AELD/Labs/Lab_1/Lab_1.sdk
+
+This is a continuation of log file D:\Sem_6\AELD\Labs\Lab_1\Lab_1.sdk\.metadata\.bak_1.log
+Created Time: 2025-03-16 22:41:02.571
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:02.571
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:02.630
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:02.942
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:03.228
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:03.432
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:03.495
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:03.602
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:03.704
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:03.830
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:04.037
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:04.123
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:04.473
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:04.624
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:04.740
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:04.840
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:05.041
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:05.153
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:05.280
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:05.602
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:05.824
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:05.992
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:06.103
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:41:06.284
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 22:45:13.760
+!MESSAGE XSCT Command: [disconnect tcfchan#9], Thread: Thread-941
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 22:45:13.774
+!MESSAGE XSCT command with result: [disconnect tcfchan#9], Result: [{Format=channel "tcfchan#9" closed, Time=1742145313773, Code=1}, ]. Thread: Thread-941
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:45:14.110
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2025-03-16 22:45:14.139
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:373)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:539)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:36)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:71)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:72)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:97)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:294)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:45)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:107)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:120)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor.access$2(LscriptEditor.java:1)
+	at com.xilinx.sdk.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:189)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2025-03-16 23:03:11.779 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:/Sem_6/AELD/Labs/Lab_1/Lab_1.sdk
+
+!ENTRY org.eclipse.ui 2 0 2025-03-16 23:03:13.807
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-16 23:03:13.807
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-16 23:03:14.616
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-16 23:03:14.616
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.211
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.212
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.212
+!MESSAGE XSCT Command: [enable_info_messages], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.228
+!MESSAGE XSCT command with result: [enable_info_messages], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.228
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.231
+!MESSAGE XSCT Command: [setws D:/Sem_6/AELD/Labs/Lab_1/Lab_1.sdk], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.360
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.362
+!MESSAGE XSCT command with result: [setws D:/Sem_6/AELD/Labs/Lab_1/Lab_1.sdk], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:23.376
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Sem_6/AELD/Labs/Lab_1/Lab_1.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:03:26.008
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Sem_6/AELD/Labs/Lab_1/Lab_1.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-5
