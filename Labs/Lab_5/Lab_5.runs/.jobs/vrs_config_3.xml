@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_fir_compiler_0_0_synth_1" LaunchDir="D:/Sem_6/AELD/Labs/Lab_5/Lab_5.runs/design_1_fir_compiler_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_fir_compiler_acp_0_synth_1" LaunchDir="D:/Sem_6/AELD/Labs/Lab_5/Lab_5.runs/design_1_fir_compiler_acp_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_fir_compiler_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
