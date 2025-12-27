@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="demo_find.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_demo_find_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">out_vec(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/out_vec_TLAST" type="array">
+               <obj_property name="ElementShortName">out_vec_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/out_vec_TREADY" type="logic">
+               <obj_property name="ElementShortName">out_vec_TREADY</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/out_vec_TVALID" type="logic">
+               <obj_property name="ElementShortName">out_vec_TVALID</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/out_vec_TDATA" type="array">
+               <obj_property name="ElementShortName">out_vec_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group8" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group9" type="group">
+            <obj_property name="label">in_vec(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/in_vec_TLAST" type="array">
+               <obj_property name="ElementShortName">in_vec_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/in_vec_TREADY" type="logic">
+               <obj_property name="ElementShortName">in_vec_TREADY</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/in_vec_TVALID" type="logic">
+               <obj_property name="ElementShortName">in_vec_TVALID</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/in_vec_TDATA" type="array">
+               <obj_property name="ElementShortName">in_vec_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group14" type="group">
+            <obj_property name="label">val(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/val_r_TREADY" type="logic">
+               <obj_property name="ElementShortName">val_r_TREADY</obj_property>
+               <obj_property name="ObjectShortName">val_r_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/val_r_TVALID" type="logic">
+               <obj_property name="ElementShortName">val_r_TVALID</obj_property>
+               <obj_property name="ObjectShortName">val_r_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/val_r_TDATA" type="array">
+               <obj_property name="ElementShortName">val_r_TDATA[7:0]</obj_property>
+               <obj_property name="ObjectShortName">val_r_TDATA[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group18" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/ap_rst_n" type="logic">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group20" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_demo_find_top/AESL_inst_demo_find/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group22" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group23" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group24" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/AUTOTB_TRANSACTION_NUM" type="array">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/ap_c_n_tvin_trans_num_val_r" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_val_r[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_val_r[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/ap_c_n_tvin_trans_num_in_vec_V_data_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_in_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_in_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/ap_c_n_tvin_trans_num_in_vec_V_last_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvin_trans_num_in_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvin_trans_num_in_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/ap_c_n_tvout_trans_num_out_vec_V_data_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_out_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_out_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/ap_c_n_tvout_trans_num_out_vec_V_last_V" type="array">
+               <obj_property name="ElementShortName">ap_c_n_tvout_trans_num_out_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ap_c_n_tvout_trans_num_out_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group25" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/LENGTH_val_r" type="array">
+               <obj_property name="ElementShortName">LENGTH_val_r[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_val_r[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/LENGTH_in_vec_V_data_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_in_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_in_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/LENGTH_in_vec_V_last_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_in_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_in_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/LENGTH_out_vec_V_data_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_out_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_out_vec_V_data_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/LENGTH_out_vec_V_last_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_out_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_out_vec_V_last_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group39" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group40" type="group">
+            <obj_property name="label">out_vec(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/out_vec_TLAST" type="array">
+               <obj_property name="ElementShortName">out_vec_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/out_vec_TREADY" type="logic">
+               <obj_property name="ElementShortName">out_vec_TREADY</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/out_vec_TVALID" type="logic">
+               <obj_property name="ElementShortName">out_vec_TVALID</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/out_vec_TDATA" type="array">
+               <obj_property name="ElementShortName">out_vec_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">out_vec_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group45" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group46" type="group">
+            <obj_property name="label">in_vec(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/in_vec_TLAST" type="array">
+               <obj_property name="ElementShortName">in_vec_TLAST[0:0]</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TLAST[0:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/in_vec_TREADY" type="logic">
+               <obj_property name="ElementShortName">in_vec_TREADY</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/in_vec_TVALID" type="logic">
+               <obj_property name="ElementShortName">in_vec_TVALID</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/in_vec_TDATA" type="array">
+               <obj_property name="ElementShortName">in_vec_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">in_vec_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group51" type="group">
+            <obj_property name="label">val(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_demo_find_top/val_r_TREADY" type="logic">
+               <obj_property name="ElementShortName">val_r_TREADY</obj_property>
+               <obj_property name="ObjectShortName">val_r_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/val_r_TVALID" type="logic">
+               <obj_property name="ElementShortName">val_r_TVALID</obj_property>
+               <obj_property name="ObjectShortName">val_r_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_demo_find_top/val_r_TDATA" type="array">
+               <obj_property name="ElementShortName">val_r_TDATA[7:0]</obj_property>
+               <obj_property name="ObjectShortName">val_r_TDATA[7:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

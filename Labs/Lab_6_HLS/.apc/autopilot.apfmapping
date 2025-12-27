@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="demo_find.h" path="D:\Sem_6\AELD\Labs\Lab_6_HLS\demo_find.h"/>
+    <originFiles name="demo_find.cpp" path="D:\Sem_6\AELD\Labs\Lab_6_HLS\demo_find.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="demo_find_tb.cpp" path="D:\Sem_6\AELD\Labs\Lab_6_HLS\demo_find_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
