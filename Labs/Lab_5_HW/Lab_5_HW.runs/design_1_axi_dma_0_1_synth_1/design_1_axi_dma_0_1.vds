@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Feb 14 15:58:26 2025
+# Process ID: 11388
+# Current directory: D:/Sem_6/AELD/Labs/Lab_5_HW/Lab_5_HW.runs/design_1_axi_dma_0_1_synth_1
+# Command line: vivado.exe -log design_1_axi_dma_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_dma_0_1.tcl
+# Log file: D:/Sem_6/AELD/Labs/Lab_5_HW/Lab_5_HW.runs/design_1_axi_dma_0_1_synth_1/design_1_axi_dma_0_1.vds
+# Journal file: D:/Sem_6/AELD/Labs/Lab_5_HW/Lab_5_HW.runs/design_1_axi_dma_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_dma_0_1.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_dma_0_1, cache-ID = 66609dc7908a7d5c.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 14 15:58:32 2025...
