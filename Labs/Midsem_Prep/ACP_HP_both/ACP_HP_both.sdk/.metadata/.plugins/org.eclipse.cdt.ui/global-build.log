@@ -1,0 +1,462 @@
+20:26:13 **** Build of project ACP_HP_both_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+20:26:34 **** Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: ACP_HP_both.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ACP_HP_both_bsp/ps7_cortexa9_0/lib -o "ACP_HP_both.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ACP_HP_both.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ACP_HP_both.elf  |tee "ACP_HP_both.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19064	   1144	  22568	  42776	   a718	ACP_HP_both.elf
+'Finished building: ACP_HP_both.elf.size'
+' '
+20:27:50 **** Auto Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:
+../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'HP':
+../src/helloworld.c:267:39: error: 'XPAR_AXI_DMA_0_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXIDMA_0_DEVICE_ID'?
+     DMA_Config = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID); // This will copy all the configuration info from .h file to our config pointer.
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXIDMA_0_DEVICE_ID
+../src/helloworld.c:267:39: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/helloworld.c:54:
+../src/helloworld.c:289:30: error: 'XPAR_AXI_DMA_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXIDMA_0_BASEADDR'?
+     status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR, 0x04) & 0x00000002; // We are checking if the second last bit is high or not, to check if DMA is IDLE or BUSY.
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:405:21: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+         PS(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:406:22: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+         ACP(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:407:21: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+         HP(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:414:22: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+          PS(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:415:17: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+    ACP(FIR_input[FIR_Data_Size]);
+        ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:416:16: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+    HP(FIR_input[FIR_Data_Size]);
+       ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+20:29:11 **** Auto Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:
+../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'HP':
+../src/helloworld.c:267:39: error: 'XPAR_AXI_DMA_0_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXIDMA_0_DEVICE_ID'?
+     DMA_Config = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID); // This will copy all the configuration info from .h file to our config pointer.
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+                                       XPAR_AXIDMA_0_DEVICE_ID
+../src/helloworld.c:267:39: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma_bd.h:114,
+                 from ../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma_bdring.h:83,
+                 from ../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma.h:488,
+                 from ../src/helloworld.c:54:
+../src/helloworld.c:289:30: error: 'XPAR_AXI_DMA_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXIDMA_0_BASEADDR'?
+     status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR, 0x04) & 0x00000002; // We are checking if the second last bit is high or not, to check if DMA is IDLE or BUSY.
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xaxidma_hw.h:316:19: note: in definition of macro 'XAxiDma_ReadReg'
+     XAxiDma_In32((BaseAddress) + (RegOffset))
+                   ^~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:405:21: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+         PS(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:406:22: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+         ACP(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:407:21: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+         HP(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:414:22: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+          PS(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:415:17: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+    ACP(FIR_input[FIR_Data_Size]);
+        ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:416:16: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+    HP(FIR_input[FIR_Data_Size]);
+       ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+20:30:27 **** Auto Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:
+../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:405:21: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+         PS(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:406:22: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+         ACP(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:407:21: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+         HP(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:414:22: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+          PS(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:415:17: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+    ACP(FIR_input[FIR_Data_Size]);
+        ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:416:16: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+    HP(FIR_input[FIR_Data_Size]);
+       ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: ACP_HP_both.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ACP_HP_both_bsp/ps7_cortexa9_0/lib -o "ACP_HP_both.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ACP_HP_both.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ACP_HP_both.elf  |tee "ACP_HP_both.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73808	   2840	  24448	 101096	  18ae8	ACP_HP_both.elf
+'Finished building: ACP_HP_both.elf.size'
+' '
+21:02:59 **** Auto Build of project ACP_HP_both_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_9/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+21:03:16 **** Auto Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:
+../../ACP_HP_both_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:405:21: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+         PS(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:406:22: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+         ACP(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:407:21: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+         HP(FIR_input[FIR_Data_Size]);
+            ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:414:22: warning: passing argument 1 of 'PS' makes pointer from integer without a cast [-Wint-conversion]
+          PS(FIR_input[FIR_Data_Size]);
+             ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:153:13: note: expected 'int *' but argument is of type 'int'
+ void PS(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:415:17: warning: passing argument 1 of 'ACP' makes pointer from integer without a cast [-Wint-conversion]
+    ACP(FIR_input[FIR_Data_Size]);
+        ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:175:14: note: expected 'int *' but argument is of type 'int'
+ void ACP(int FIR_input[FIR_Data_Size])
+          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:416:16: warning: passing argument 1 of 'HP' makes pointer from integer without a cast [-Wint-conversion]
+    HP(FIR_input[FIR_Data_Size]);
+       ~~~~~~~~~^~~~~~~~~~~~~~~
+../src/helloworld.c:240:13: note: expected 'int *' but argument is of type 'int'
+ void HP(int FIR_input[FIR_Data_Size])
+         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ACP_HP_both_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: ACP_HP_both.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ACP_HP_both_bsp/ps7_cortexa9_0/lib -o "ACP_HP_both.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ACP_HP_both.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ACP_HP_both.elf  |tee "ACP_HP_both.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  73744	   2840	  24448	 101032	  18aa8	ACP_HP_both.elf
+'Finished building: ACP_HP_both.elf.size'
+' '
+23:12:02 **** Incremental Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:15:49 **** Incremental Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:17:19 **** Incremental Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+23:26:00 **** Incremental Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

@@ -1,0 +1,8 @@
+23:26:00 **** Incremental Build of configuration Debug for project ACP_HP_both ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+23:26:00 Build Finished (took 268ms)
+

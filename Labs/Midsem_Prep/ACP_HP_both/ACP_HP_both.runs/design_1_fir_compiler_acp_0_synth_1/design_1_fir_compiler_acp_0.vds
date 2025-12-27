@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Feb 22 19:58:27 2025
+# Process ID: 2312
+# Current directory: D:/Sem_6/AELD/Labs/Midsem_Prep/ACP_HP_both/ACP_HP_both.runs/design_1_fir_compiler_acp_0_synth_1
+# Command line: vivado.exe -log design_1_fir_compiler_acp_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_fir_compiler_acp_0.tcl
+# Log file: D:/Sem_6/AELD/Labs/Midsem_Prep/ACP_HP_both/ACP_HP_both.runs/design_1_fir_compiler_acp_0_synth_1/design_1_fir_compiler_acp_0.vds
+# Journal file: D:/Sem_6/AELD/Labs/Midsem_Prep/ACP_HP_both/ACP_HP_both.runs/design_1_fir_compiler_acp_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_fir_compiler_acp_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_fir_compiler_acp_0, cache-ID = 6ac8cb04919392f2.
+config_ip_cache: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 421.695 ; gain = 7.789
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 22 19:58:43 2025...
