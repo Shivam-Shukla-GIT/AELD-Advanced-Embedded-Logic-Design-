@@ -1,0 +1,221 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Lab_7_MM_HLS/matrixmul.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [XFORM 203-101] Partitioning array 'input_A' (Lab_7_MM_HLS/matrixmul.cpp:74) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'input_B' (Lab_7_MM_HLS/matrixmul.cpp:76) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_input_A1' (Lab_7_MM_HLS/matrixmul.cpp:84:3) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_input_B1' (Lab_7_MM_HLS/matrixmul.cpp:94:3) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop2' (Lab_7_MM_HLS/matrixmul.cpp:105:33) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop1' (Lab_7_MM_HLS/matrixmul.cpp:104:33) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_output_C1' (Lab_7_MM_HLS/matrixmul.cpp:116:41) in function 'matrixmul_3'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul_3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_input_A1_loop_input_A2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_input_B1_loop_input_B2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop1_loop2_loop3'.
+WARNING: [SCHED 204-68] The II Violation in module 'matrixmul_3' (Loop: loop1_loop2_loop3): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('res', Lab_7_MM_HLS/matrixmul.cpp:109) and 'select' operation ('select_ln109_3', Lab_7_MM_HLS/matrixmul.cpp:109).
+WARNING: [SCHED 204-68] The II Violation in module 'matrixmul_3' (Loop: loop1_loop2_loop3): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('res', Lab_7_MM_HLS/matrixmul.cpp:109) and 'select' operation ('select_ln109_3', Lab_7_MM_HLS/matrixmul.cpp:109).
+WARNING: [SCHED 204-68] The II Violation in module 'matrixmul_3' (Loop: loop1_loop2_loop3): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('res', Lab_7_MM_HLS/matrixmul.cpp:109) and 'select' operation ('select_ln109_3', Lab_7_MM_HLS/matrixmul.cpp:109).
+WARNING: [SCHED 204-68] The II Violation in module 'matrixmul_3' (Loop: loop1_loop2_loop3): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('res', Lab_7_MM_HLS/matrixmul.cpp:109) and 'select' operation ('select_ln109_3', Lab_7_MM_HLS/matrixmul.cpp:109).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 12.
+INFO: [SCHED 204-61] Pipelining loop 'loop_output_C1_loop_output_C2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.252 seconds; current allocated memory: 104.914 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 105.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/in_A_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/in_A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/out_C_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/out_C_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul_3' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_0' to 'matrixmul_3_inputbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_1' to 'matrixmul_3_inputcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_2' to 'matrixmul_3_inputdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_3' to 'matrixmul_3_inputeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_4' to 'matrixmul_3_inputfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_5' to 'matrixmul_3_inputg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_6' to 'matrixmul_3_inputhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_7' to 'matrixmul_3_inputibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_0' to 'matrixmul_3_inputjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_1' to 'matrixmul_3_inputkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_2' to 'matrixmul_3_inputlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_3' to 'matrixmul_3_inputmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_4' to 'matrixmul_3_inputncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_5' to 'matrixmul_3_inputocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_6' to 'matrixmul_3_inputpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_7' to 'matrixmul_3_inputqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_output_C' to 'matrixmul_3_outpurcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_fadd_32ns_32ns_32_5_full_dsp_1' to 'matrixmul_3_fadd_sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_fmul_32ns_32ns_32_4_max_dsp_1' to 'matrixmul_3_fmul_tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_mux_83_32_1_1' to 'matrixmul_3_mux_8udo' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_3_fadd_sc4': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_3_fmul_tde': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_3_mux_8udo': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_3'.
+INFO: [HLS 200-111]  Elapsed time: 0.544 seconds; current allocated memory: 107.622 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrixmul_3_inputbkb_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrixmul_3_outpurcU_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 184.227 ; gain = 94.082
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul_3.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul_3.
+INFO: [HLS 200-112] Total elapsed time: 9.247 seconds; peak allocated memory: 107.622 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Lab_7_MM_HLS/matrixmul.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop2' (Lab_7_MM_HLS/matrixmul.cpp:105) in function 'matrixmul_3' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'loop3' (Lab_7_MM_HLS/matrixmul.cpp:108) in function 'matrixmul_3' completely with a factor of 8.
+INFO: [XFORM 203-101] Partitioning array 'input_A' (Lab_7_MM_HLS/matrixmul.cpp:74) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'input_B' (Lab_7_MM_HLS/matrixmul.cpp:76) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_input_A1' (Lab_7_MM_HLS/matrixmul.cpp:84:3) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_input_B1' (Lab_7_MM_HLS/matrixmul.cpp:94:3) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop1' (Lab_7_MM_HLS/matrixmul.cpp:104:33) in function 'matrixmul_3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_output_C1' (Lab_7_MM_HLS/matrixmul.cpp:116:41) in function 'matrixmul_3'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul_3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_input_A1_loop_input_A2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop_input_B1_loop_input_B2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'loop1_loop2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 46.
+INFO: [SCHED 204-61] Pipelining loop 'loop_output_C1_loop_output_C2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.023 seconds; current allocated memory: 104.915 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 105.951 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/in_A_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/in_A_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/out_C_V_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul_3/out_C_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul_3' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_0' to 'matrixmul_3_inputbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_1' to 'matrixmul_3_inputcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_2' to 'matrixmul_3_inputdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_3' to 'matrixmul_3_inputeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_4' to 'matrixmul_3_inputfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_5' to 'matrixmul_3_inputg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_6' to 'matrixmul_3_inputhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_A_7' to 'matrixmul_3_inputibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_0' to 'matrixmul_3_inputjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_1' to 'matrixmul_3_inputkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_2' to 'matrixmul_3_inputlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_3' to 'matrixmul_3_inputmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_4' to 'matrixmul_3_inputncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_5' to 'matrixmul_3_inputocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_6' to 'matrixmul_3_inputpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_input_B_7' to 'matrixmul_3_inputqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_output_C' to 'matrixmul_3_outpurcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_fadd_32ns_32ns_32_5_full_dsp_1' to 'matrixmul_3_fadd_sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matrixmul_3_fmul_32ns_32ns_32_4_max_dsp_1' to 'matrixmul_3_fmul_tde' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_3_fadd_sc4': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'matrixmul_3_fmul_tde': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul_3'.
+INFO: [HLS 200-111]  Elapsed time: 0.584 seconds; current allocated memory: 108.567 MB.
+INFO: [RTMG 210-278] Implementing memory 'matrixmul_3_inputbkb_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrixmul_3_outpurcU_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.219 ; gain = 93.883
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul_3.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul_3.
+INFO: [HLS 200-112] Total elapsed time: 9.013 seconds; peak allocated memory: 108.567 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

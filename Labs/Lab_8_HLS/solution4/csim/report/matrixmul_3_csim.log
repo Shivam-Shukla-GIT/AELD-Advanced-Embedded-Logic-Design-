@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../Lab_7_MM_HLS/matrixmul_tb.cpp in debug mode
+   Compiling ../../../../Lab_7_MM_HLS/matrixmul.cpp in debug mode
+   Generating csim.exe
+No Error!
+WARNING: Hls::stream 'hls::stream<axis_data>.1' contains leftover data, which may result in RTL simulation hanging.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,13 @@
+vhdl xil_defaultlib "ip/xil_defaultlib/matrixmul_3_ap_fadd_3_full_dsp_32.vhd"
+vhdl xil_defaultlib "ip/xil_defaultlib/matrixmul_3_ap_fmul_2_max_dsp_32.vhd"
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_s_in_A.v"
+sv xil_defaultlib "AESL_axi_s_out_C.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "matrixmul_3.autotb.v"
+sv xil_defaultlib "matrixmul_3.v"
+sv xil_defaultlib "matrixmul_3_fadd_sc4.v"
+sv xil_defaultlib "matrixmul_3_fmul_tde.v"
+sv xil_defaultlib "matrixmul_3_inputbkb.v"
+sv xil_defaultlib "matrixmul_3_outpurcU.v"
+
