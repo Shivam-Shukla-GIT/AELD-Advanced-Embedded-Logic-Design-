@@ -1,0 +1,167 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "platform.h"
+#include "xtime_l.h"
+#define EXPT 3
+#define INP_SIZE 32
+
+XTime PS_start, PS_end, PL_start, PL_end;
+
+void Find_ACP(int Find_input[INP_SIZE], int Find_output[INP_SIZE])
+{
+	int status;
+
+	 // ACP DMA Initialization
+	 XAxiDma_Config *DMA_confptracp; //DMA configuration pointer
+	 XAxiDma AxiDMAacp; // DMA instance pointer
+
+	 // Copy the DMA information (received from hardware in xparameters.h file)
+	 DMA_confptracp = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
+	 status = XAxiDma_CfgInitialize(&AxiDMAacp, DMA_confptracp);
+	 if(status != XST_SUCCESS)
+	 {
+		printf("ACP DMA Init Failed\t\n");
+		return XST_FAILURE;
+	 }
+
+	   status = XAxiDma_SimpleTransfer(&AxiDMAacp, (UINTPTR)Find_output, (sizeof(int)*INP_SIZE),XAXIDMA_DEVICE_TO_DMA);
+	   status = XAxiDma_SimpleTransfer(&AxiDMAacp, (UINTPTR)Find_input, (sizeof(int)*INP_SIZE),XAXIDMA_DMA_TO_DEVICE);
+	   // We have only configure the DMA to perform these two transactions..DMA might not have started the transactions.
+
+	   status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x04) & 0x00000002;
+	   while(status!=0x00000002)
+	   {
+		 status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x04) & 0x00000002;
+	   }
+	   status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x34) & 0x00000002;
+
+	  while(status!=0x00000002)
+	  {
+		status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR,0x34) & 0x00000002;
+	  }
+}
+
+void PS_FUNC(int in_vec[INP_SIZE], int out_vec[INP_SIZE], int val)
+{
+    for (int i = 0; i < INP_SIZE; i++) {
+        if (in_vec[i] == val)
+            out_vec[i] = 1;
+        else
+            out_vec[i] = 0;
+    }
+}
+
+int main()
+{
+    init_platform();
+
+    // Random number generation for in_vector
+    int in_vec[INP_SIZE];
+    int out_vec_PS[INP_SIZE], out_vec_PL[INP_SIZE];
+
+    float PS_Time = 0.0, PL_Time = 0.0;
+
+    for (int exp = 0; exp < EXPT; exp++) {
+        printf("\n----------- EXPERIMENT %d START --------------------\n", exp+1);
+
+        // Generate random numbers for in_vec
+        for (int i = 0; i < INP_SIZE; i++) {
+            in_vec[i] = rand() % 20; // Random number between 0 and 19
+        }
+
+        // Start time for PL function (using Find_ACP)
+        XTime_SetTime(0);
+        XTime_GetTime(&PL_start);
+        Find_ACP(in_vec, out_vec_PL); // Function call for PL with ACP
+        XTime_GetTime(&PL_end);
+
+        // Start time for PS function
+        XTime_SetTime(0);
+        XTime_GetTime(&PS_start);
+        PS_FUNC(in_vec, out_vec_PS, 4); // Function call for PS
+        XTime_GetTime(&PS_end);
+
+        // Compare the mismatch between the outputs of PS_FUNC and PL_FUNC
+        int mismatch_count = 0;
+        for (int i = 0; i < INP_SIZE; i++) {
+            printf("Input[%d]: %d, PS output[%d]: %d, PL output[%d]: %d\n",
+                   i+1, in_vec[i], i+1, out_vec_PS[i], i+1, out_vec_PL[i]);
+            if (out_vec_PS[i] != out_vec_PL[i]) {
+                mismatch_count++;
+                printf("\nMismatch found at index: %d\n", i);
+            }
+        }
+
+        if (mismatch_count == 0) {
+            printf("\nNo mismatches found for this experiment.\n");
+        }
+
+        // Accumulate times
+        PS_Time += (float)(PS_end - PS_start) / (COUNTS_PER_SECOND / 1000000); // Convert to microseconds
+        PL_Time += (float)(PL_end - PL_start) / (COUNTS_PER_SECOND / 1000000); // Convert to microseconds
+
+        printf("\n----------- EXPERIMENT %d END --------------------\n", exp+1);
+    }
+
+    PS_Time /= EXPT;
+    PL_Time /= EXPT;
+
+    // Calculate and print the acceleration factor
+    float acceleration_factor = PS_Time / PL_Time;
+
+    printf("\n----------- AVERAGE EXECUTION TIME (Microseconds) & ACCELERATION FACTOR --------------------\n");
+    printf("PL time: %.2f, PS time: %.2f, Acceleration factor: %.2f\n", PL_Time, PS_Time, acceleration_factor);
+    printf("-----------------------------------------------------------------------------------------------\n");
+
+    cleanup_platform();
+    return 0;
+}
