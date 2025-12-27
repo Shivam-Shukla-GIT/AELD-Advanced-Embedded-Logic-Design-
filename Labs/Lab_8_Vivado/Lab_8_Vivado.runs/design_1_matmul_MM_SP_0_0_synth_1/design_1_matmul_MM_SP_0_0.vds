@@ -1,0 +1,1212 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr  7 22:20:37 2025
+# Process ID: 21516
+# Current directory: D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1
+# Command line: vivado.exe -log design_1_matmul_MM_SP_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_matmul_MM_SP_0_0.tcl
+# Log file: D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1/design_1_matmul_MM_SP_0_0.vds
+# Journal file: D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_matmul_MM_SP_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Sem_6/AELD/Labs/Lab_8_HLS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_matmul_MM_SP_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25148 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 859.773 ; gain = 177.516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_matmul_MM_SP_0_0' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ip/design_1_matmul_MM_SP_0_0/synth/design_1_matmul_MM_SP_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 22'b0000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 22'b0000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 22'b0000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 22'b0000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 22'b0000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 22'b0000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 22'b0000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 22'b0000000000000010000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 22'b0000000000000100000000 
+	Parameter ap_ST_fsm_state12 bound to: 22'b0000000000001000000000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 22'b0000000000010000000000 
+	Parameter ap_ST_fsm_state15 bound to: 22'b0000000000100000000000 
+	Parameter ap_ST_fsm_pp2_stage0 bound to: 22'b0000000001000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 22'b0000000010000000000000 
+	Parameter ap_ST_fsm_pp3_stage0 bound to: 22'b0000000100000000000000 
+	Parameter ap_ST_fsm_state65 bound to: 22'b0000001000000000000000 
+	Parameter ap_ST_fsm_pp4_stage0 bound to: 22'b0000010000000000000000 
+	Parameter ap_ST_fsm_state69 bound to: 22'b0000100000000000000000 
+	Parameter ap_ST_fsm_state70 bound to: 22'b0001000000000000000000 
+	Parameter ap_ST_fsm_state71 bound to: 22'b0010000000000000000000 
+	Parameter ap_ST_fsm_state72 bound to: 22'b0100000000000000000000 
+	Parameter ap_ST_fsm_state73 bound to: 22'b1000000000000000000000 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_GMEM_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_GMEM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_GMEM_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_GMEM_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_GMEM_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_GMEM_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_GMEM_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:193]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_AXILiteS_s_axi' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_AXILiteS_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 5'b00000 
+	Parameter ADDR_GIE bound to: 5'b00100 
+	Parameter ADDR_IER bound to: 5'b01000 
+	Parameter ADDR_ISR bound to: 5'b01100 
+	Parameter ADDR_MATRIX_IN_DATA_0 bound to: 5'b10000 
+	Parameter ADDR_MATRIX_IN_CTRL bound to: 5'b10100 
+	Parameter ADDR_MATRIX_C_HW_DATA_0 bound to: 5'b11000 
+	Parameter ADDR_MATRIX_C_HW_CTRL bound to: 5'b11100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 5 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_AXILiteS_s_axi.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_AXILiteS_s_axi' (1#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:8]
+	Parameter CONSERVATIVE bound to: 0 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_throttl' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:708]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter USER_MAXREQS bound to: 16 - type: integer 
+	Parameter CONSERVATIVE bound to: 0 - type: integer 
+	Parameter AVERAGE_MODE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_throttl' (2#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:708]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_write' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:1701]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo' (3#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_reg_slice' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:314]
+	Parameter N bound to: 64 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_reg_slice' (4#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:314]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo__parameterized0' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo__parameterized0' (4#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_buffer' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:527]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_buffer' (5#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:527]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo__parameterized1' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo__parameterized1' (5#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo__parameterized2' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_fifo__parameterized2' (5#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:418]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:2069]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_write' (6#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:1701]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_read' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:904]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_buffer__parameterized0' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:527]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 35 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_buffer__parameterized0' (6#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:527]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_gmem_m_axi_reg_slice__parameterized0' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:314]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_reg_slice__parameterized0' (6#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:314]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:1252]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi_read' (7#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:904]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_gmem_m_axi' (8#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_Inarbkb' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Inarbkb.v:40]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 128 - type: integer 
+	Parameter AddressWidth bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_Inarbkb_ram' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Inarbkb.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 7 - type: integer 
+	Parameter MEM_SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Inarbkb.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_Inarbkb_ram' (9#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Inarbkb.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_Inarbkb' (10#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Inarbkb.v:40]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_Outacud' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Outacud.v:40]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_Outacud_ram' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Outacud.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 64 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Outacud.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_Outacud_ram' (11#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Outacud.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_Outacud' (12#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_Outacud.v:40]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_In_A_0' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_In_A_0.v:40]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 8 - type: integer 
+	Parameter AddressWidth bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_In_A_0_ram' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_In_A_0.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 3 - type: integer 
+	Parameter MEM_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_In_A_0.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_In_A_0_ram' (13#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_In_A_0.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_In_A_0' (14#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_In_A_0.v:40]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_fadddEe' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_fadddEe.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'matmul_MM_SP_ap_fadd_3_full_dsp_32' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/ip/matmul_MM_SP_ap_fadd_3_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_8' declared at 'd:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/83a3/hdl/floating_point_v7_1_vh_rfs.vhd:94214' bound to instance 'U0' of component 'floating_point_v7_1_8' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/ip/matmul_MM_SP_ap_fadd_3_full_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'matmul_MM_SP_ap_fadd_3_full_dsp_32' (32#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/ip/matmul_MM_SP_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_fadddEe' (33#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_fadddEe.v:8]
+INFO: [Synth 8-6157] synthesizing module 'matmul_MM_SP_fmuleOg' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_fmuleOg.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'matmul_MM_SP_ap_fmul_2_max_dsp_32' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/ip/matmul_MM_SP_ap_fmul_2_max_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_8' declared at 'd:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/83a3/hdl/floating_point_v7_1_vh_rfs.vhd:94214' bound to instance 'U0' of component 'floating_point_v7_1_8' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/ip/matmul_MM_SP_ap_fmul_2_max_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'matmul_MM_SP_ap_fmul_2_max_dsp_32' (41#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/ip/matmul_MM_SP_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP_fmuleOg' (42#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_fmuleOg.v:8]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3561]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3563]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3565]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3567]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3569]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3571]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3573]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3575]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3577]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3579]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3581]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3583]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter44_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2318]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter43_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2317]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter42_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2316]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter41_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2315]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter40_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2314]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter39_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2312]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter38_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2311]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter37_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2310]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter36_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2309]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter35_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2308]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter34_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2307]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter33_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2306]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter32_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2305]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter31_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2304]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter30_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2303]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter29_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2301]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter28_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2300]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter27_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2299]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter26_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2298]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter25_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2297]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter24_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2296]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter23_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2295]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter22_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2294]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter21_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2293]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter20_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2292]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter19_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2291]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter18_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2290]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter17_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2289]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter16_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2288]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter15_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2287]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter14_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2286]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter13_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2285]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter12_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2284]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter11_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2283]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter10_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2282]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter9_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2282]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter8_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2323]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter7_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2322]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter6_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2321]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter5_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2320]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter4_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2319]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter3_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2313]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter2_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2302]
+INFO: [Synth 8-6155] done synthesizing module 'matmul_MM_SP' (43#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_matmul_MM_SP_0_0' (44#1) [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ip/design_1_matmul_MM_SP_0_0/synth/design_1_matmul_MM_SP_0_0.v:59]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized64 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized64 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized64 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized62 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized62 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized62 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1037.090 ; gain = 354.832
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1037.090 ; gain = 354.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1037.090 ; gain = 354.832
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 880 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ip/design_1_matmul_MM_SP_0_0/constraints/matmul_MM_SP_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ip/design_1_matmul_MM_SP_0_0/constraints/matmul_MM_SP_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1143.172 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 24 instances were transformed.
+  FDE => FDRE: 24 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 1159.004 ; gain = 15.832
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1159.004 ; gain = 476.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1159.004 ; gain = 476.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1159.004 ; gain = 476.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'matmul_MM_SP_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'matmul_MM_SP_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matmul_MM_SP_gmem_m_axi_reg_slice'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:610]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:506]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP_gmem_m_axi.v:610]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matmul_MM_SP_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter1_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3610]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter2_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3611]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter3_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3612]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter5_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3614]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter6_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3615]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter7_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3616]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter8_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3617]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter10_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3619]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter11_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3620]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter12_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3621]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter13_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3622]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter15_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3624]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter16_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3625]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter17_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3626]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter18_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3627]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter20_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3629]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter21_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3630]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter22_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3631]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter23_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3632]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter25_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3634]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter26_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3635]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter27_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3636]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter28_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3637]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter30_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3639]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter31_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3640]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter32_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3641]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter33_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3642]
+INFO: [Synth 8-4471] merging register 'zext_ln186_reg_1378_pp3_iter34_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3643]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3644]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter1_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3645]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter2_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3646]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter3_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3647]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter5_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3649]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter6_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3650]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter7_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3651]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter8_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3652]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter10_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3654]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter11_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3655]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter12_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3656]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter13_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3657]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter15_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3659]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter16_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3660]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter17_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3661]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter18_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3662]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter20_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3664]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter21_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3665]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter22_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3666]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter23_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3667]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter25_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3669]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter26_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3670]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter27_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3671]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter28_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3672]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter30_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3674]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter31_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3675]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter32_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3676]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter33_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3677]
+INFO: [Synth 8-4471] merging register 'zext_ln183_reg_1399_pp3_iter34_reg_reg[63:4]' into 'zext_ln186_reg_1378_reg[63:4]' [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:3678]
+WARNING: [Synth 8-3936] Found unconnected internal register 'phi_ln154_reg_623_pp0_iter1_reg_reg' and it is trimmed from '8' to '7' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2211]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter34_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2383]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter33_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2382]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter32_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2381]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter31_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2380]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter30_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2379]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter29_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2377]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter28_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2376]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter27_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2375]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter26_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2374]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter25_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2373]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter24_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2372]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter23_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2371]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter22_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2370]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter21_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2369]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter20_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2368]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter19_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2367]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter18_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2366]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter17_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2365]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter16_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2364]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter15_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2363]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter14_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2362]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter13_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2361]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter12_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2360]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter11_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2359]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter10_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2358]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter9_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2358]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter8_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2389]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter7_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2388]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter6_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2387]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter5_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2386]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter4_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2385]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter3_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2384]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter2_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2378]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_pp3_iter1_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2233]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln186_reg_1378_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2479]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_pp3_iter1_reg_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2231]
+WARNING: [Synth 8-3936] Found unconnected internal register 'select_ln186_1_reg_1368_reg' and it is trimmed from '7' to '6' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2477]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter34_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2350]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter33_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2349]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter32_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2348]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter31_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2347]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter30_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2346]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter29_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2344]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter28_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2343]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter27_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2342]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter26_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2341]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter25_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2340]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter24_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2339]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter23_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2338]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter22_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2337]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter21_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2336]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter20_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2335]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter19_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2334]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter18_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2333]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter17_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln183_reg_1399_pp3_iter16_reg_reg' and it is trimmed from '4' to '3' bits. [d:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.srcs/sources_1/bd/design_1/ipshared/010d/hdl/verilog/matmul_MM_SP.v:2331]
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'matmul_MM_SP_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'matmul_MM_SP_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matmul_MM_SP_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matmul_MM_SP_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1159.004 ; gain = 476.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'matmul_MM_SP_fadddEe:/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'matmul_MM_SP_fadddEe:/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'matmul_MM_SP_fadddEe:/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'matmul_MM_SP_fadddEe:/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'matmul_MM_SP_fadddEe:/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'matmul_MM_SP_fadddEe:/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'matmul_MM_SP_fmuleOg:/matmul_MM_SP_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'matmul_MM_SP_fmuleOg:/matmul_MM_SP_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'matmul_MM_SP_fmuleOg:/matmul_MM_SP_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'matmul_MM_SP_fmuleOg:/matmul_MM_SP_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "data31" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data41" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln186_1_fu_1162_p2_inferred/\ind_4_reg_767_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln186_1_fu_1162_p2_inferred/\ind_4_reg_767_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln186_1_fu_1162_p2_inferred/\ind_4_reg_767_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U9/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/din1_buf1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U10/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U2/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U11/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U3/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U12/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U4/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U13/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U5/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U14/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln162_1_fu_1068_p2_inferred/\ind_2_reg_712_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln159_fu_974_p2_inferred/\ind_0_reg_657_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln162_1_fu_1068_p2_inferred/\ind_2_reg_712_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln159_fu_974_p2_inferred/\ind_0_reg_657_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln162_1_fu_1068_p2_inferred/\ind_2_reg_712_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/add_ln159_fu_974_p2_inferred/\ind_0_reg_657_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U6/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U15/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U7/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fmuleOg_U16/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[30]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[62]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[31]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[62]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[62]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[61]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[60]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[59]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[58]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[57]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[56]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[55]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[54]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[53]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[52]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[51]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[50]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[49]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[48]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[47]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[46]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[45]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[44]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[43]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[42]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[41]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[40]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[39] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[38]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[37]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[36]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[35]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[34]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[33]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p2_reg[63] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[62]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[61]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[60]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[59]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[58]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[57]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[56]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[55]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[54]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[53]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[52]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[51]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[50]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[49]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[48]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[47]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[46]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[45]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[44]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[43]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[42]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[41]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[40]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[39]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[38] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[37]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[36]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[35]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[34]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[33]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]' (FDE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p2_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_fadddEe_U8/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/start_addr_reg[0]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/start_addr_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/start_addr_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/start_addr_reg[0]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/start_addr_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/start_addr_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[32]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[33]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[34]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/q_tmp_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[4]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[5]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[6]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.arlen_buf_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[0]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/could_multi_bursts.araddr_buf_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[5]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[6]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awlen_buf_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[0]' (FDRE) to 'inst/matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/could_multi_bursts.awaddr_buf_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/A_SIGN_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/SUB_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/B_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[17]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[19]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[21]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'inst/matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_fadddEe_U1/matmul_MM_SP_ap_fadd_3_full_dsp_32_u/U0 /i_synth/\ADDSUB_OP.ADDSUB/DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/rs_rreq/data_p1_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p1_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/rs_wreq/data_p1_reg[63] )
+WARNING: [Synth 8-3332] Sequential element (matmul_MM_SP_AXILiteS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module matmul_MM_SP.
+WARNING: [Synth 8-3332] Sequential element (matmul_MM_SP_AXILiteS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module matmul_MM_SP.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_read/fifo_rreq/q_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/fifo_wreq/q_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\matmul_MM_SP_gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/q_reg[5] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1159.004 ; gain = 476.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_17/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_21/matmul_MM_SP_gmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_125/Inarray_AB_U/matmul_MM_SP_Inarbkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_125/Inarray_AB_U/matmul_MM_SP_Inarbkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1159.004 ; gain = 476.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.258 ; gain = 499.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/matmul_MM_SP_gmem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/matmul_MM_SP_gmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/Inarray_AB_U/matmul_MM_SP_Inarbkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/Inarray_AB_U/matmul_MM_SP_Inarbkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1189.250 ; gain = 506.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1193.043 ; gain = 510.785
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1193.043 ; gain = 510.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 1193.043 ; gain = 510.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 1193.043 ; gain = 510.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1193.988 ; gain = 511.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1193.988 ; gain = 511.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    80|
+|2     |DSP48E1    |     8|
+|3     |DSP48E1_1  |     8|
+|4     |DSP48E1_2  |     8|
+|5     |DSP48E1_3  |     8|
+|6     |DSP48E1_4  |     8|
+|7     |LUT1       |    67|
+|8     |LUT2       |   510|
+|9     |LUT3       |  1121|
+|10    |LUT4       |   719|
+|11    |LUT5       |   697|
+|12    |LUT6       |   842|
+|13    |MUXCY      |   592|
+|14    |RAM16X1S   |   512|
+|15    |RAMB18E1   |     2|
+|16    |RAMB18E1_1 |     1|
+|17    |RAMB18E1_2 |     1|
+|18    |SRL16E     |   126|
+|19    |SRLC32E    |    12|
+|20    |XORCY      |   200|
+|21    |FDE        |    24|
+|22    |FDRE       |  4733|
+|23    |FDSE       |     6|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1193.988 ; gain = 511.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 221 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:53 . Memory (MB): peak = 1193.988 ; gain = 389.816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1193.988 ; gain = 511.730
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1452 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1197.922 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 696 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 160 instances
+  FDE => FDRE: 24 instances
+  RAM16X1S => RAM32X1S (RAMS32): 512 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+353 Infos, 216 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:19 . Memory (MB): peak = 1197.922 ; gain = 783.535
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1197.922 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1/design_1_matmul_MM_SP_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_matmul_MM_SP_0_0, cache-ID = c9c52ebda3636ce8
+INFO: [Coretcl 2-1174] Renamed 853 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1197.922 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Sem_6/AELD/Labs/Lab_8_Vivado/Lab_8_Vivado.runs/design_1_matmul_MM_SP_0_0_synth_1/design_1_matmul_MM_SP_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_matmul_MM_SP_0_0_utilization_synth.rpt -pb design_1_matmul_MM_SP_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  7 22:22:09 2025...
